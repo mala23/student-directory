@@ -38,9 +38,9 @@ def print_header
   puts "-------------"
 end
 
-def print(names)
-  names.each do |name|
-   puts name
+def print(students)
+  students.each do |student|
+   puts "#{student[0]} (#(student[1]) cohort)"
   end
 end
 
