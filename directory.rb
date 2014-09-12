@@ -1,10 +1,10 @@
 #Let's put all students intod an array
 names = [
- {:name => "ecomba", cohort => :september},
- {:name => "stephenlloyd", cohort => :september},
- {:name => "alexpeattie", cohort => :september},
- {:name => "vic329", cohort => :september},
- {:name => "NicolePell", cohort => :september},
+ {:name => "ecomba", :cohort => :september},
+ {:name => "stephenlloyd", :cohort => :september},
+ {:name => "alexpeattie", :cohort => :september},
+ {:name => "vic329", :cohort => :september},
+ {:name => "NicolePell", :cohort => :september},
  {:name => "bmordan", :cohort => :september},
  {:name => "elenagarrone", :cohort => :september},
  {:name => "yvettecook", :cohort => :september},
