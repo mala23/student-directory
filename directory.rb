@@ -1,3 +1,4 @@
+student_count = 9
 #First we print the list of students
 puts "The students of my cohort at Makers Academy"
 puts "-------------"
@@ -35,5 +36,5 @@ puts "AndrewHarrison"
 #Finally, we print the total
 print "Overall, we have "
 #It's important to know, that print() does not add a line break
-print 9
+print student_count
 puts " great students"
