@@ -31,3 +31,6 @@ puts "annaschechter"
 puts "alexfakhri"
 puts "deniseyu"
 puts "AndrewHarrison"
+print "Overall, we have "
+print 9
+puts " great students"
