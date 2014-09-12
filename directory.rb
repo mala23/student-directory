@@ -1,5 +1,5 @@
 #Let's put all students intod an array
-names = [
+students = [
  {:name => "ecomba", :cohort => :september},
  {:name => "stephenlloyd", :cohort => :september},
  {:name => "alexpeattie", :cohort => :september},
@@ -40,14 +40,14 @@ end
 
 def print(students)
   students.each do |student|
-   puts "#{student[:name]} (#(student[:cohort]) cohort)"
+    puts "#{student[:name]} (#{student[:cohort]} cohort)"
   end
 end
 
 def print_footer(names)
   puts "Overall, we have #{names.length} great students"
 end
-#Nothing happens until we call the methods
+
 print_header
 print(students)
 print_footer(students)
