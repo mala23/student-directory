@@ -34,7 +34,4 @@ puts "alexfakhri"
 puts "deniseyu"
 puts "AndrewHarrison"
 #Finally, we print the total
-print "Overall, we have "
-#It's important to know, that print() does not add a line break
-print student_count
-puts " great students"
+puts "Overall, we have #{student_count} great students"
