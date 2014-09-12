@@ -1,5 +1,5 @@
 #Let's put all students intod an array
-students = [
+names = [
  "ecomba",
  "stephenlloyd",
  "alexpeattie",
@@ -32,11 +32,20 @@ students = [
  "deniseyu",
  "AndrewHarrison"
 ]
-#And then print them
-puts "The students of my cohort at Makers Academy"
-puts "-------------"
-students.each do |student|
-  puts student
+
+def print_header
+  puts "The students of my cohort at Makers Academy"
+  puts "-------------"
+
+def print(names)
+  names.each do |student|
+   puts name
 end
-#Finally, we print the total
-puts "Overall, we have #{students.length} great students"
+
+def print_footer(names)
+  puts "Overall, we have #{names.length} great students"
+end
+#Nothing happens until we call the methods
+print_header
+print(students)
+print_footer(students)
