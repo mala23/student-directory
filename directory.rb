@@ -36,10 +36,12 @@ names = [
 def print_header
   puts "The students of my cohort at Makers Academy"
   puts "-------------"
+end
 
 def print(names)
-  names.each do |student|
+  names.each do |name|
    puts name
+  end
 end
 
 def print_footer(names)
