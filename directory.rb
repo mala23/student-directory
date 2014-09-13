@@ -1,51 +1,18 @@
-#Let's put all students intod an array
-students = [
- {:name => "ecomba", :cohort => :september},
- {:name => "stephenlloyd", :cohort => :september},
- {:name => "alexpeattie", :cohort => :september},
- {:name => "vic329", :cohort => :september},
- {:name => "NicolePell", :cohort => :september},
- {:name => "bmordan", :cohort => :september},
- {:name => "elenagarrone", :cohort => :september},
- {:name => "yvettecook", :cohort => :september},
- {:name => "HatStephens", :cohort => :september},
- {:name => "ananogal", :cohort => :september},
- {:name => "craigh44", :cohort => :september},
- {:name => "Scully87", :cohort => :september},
- {:name => "EllaNancyFay", :cohort => :september},
- {:name => "fadieh", :cohort => :september},
- {:name => "mala23", :cohort => :september},
- {:name => "zrasool88", :cohort => :september},
- {:name => "galicians", :cohort => :september},
- {:name => "danjocutler", :cohort => :september},
- {:name => "camillavk", :cohort => :september},
- {:name => "MadameSardine", :cohort => :september},
- {:name => "jamesascarter", :cohort => :september},
- {:name => "slstevens", :cohort => :september},
- {:name => "Schlap", :cohort => :september},
- {:name => "andrewhercules", :cohort => :september},
- {:name => "shortynielsen", :cohort => :september},
- {:name => "snozza", :cohort => :september},
- {:name => "SBLLB", :cohort => :september},
- {:name => "annaschechter", :cohort => :september},
- {:name => "alexfakhri", :cohort => :september},
- {:name => "deniseyu", :cohort => :september},
- {:name => "AndrewHarrison", :cohort => :september}
-]
+@students = [] # an empty array accessible to all methods
 
 def print_header
   puts "The students of my cohort at Makers Academy"
   puts "-------------"
 end
 
-def print(students)
+def print_students_list
   students.each do |student|
     puts "#{student[:name]} (#{student[:cohort]} cohort)"
   end
 end
 
-def print_footer(names)
-  puts "Overall, we have #{names.length} great students"
+def print_footer
+  puts "Overall, we have #{students.length} great students"
 end
 
 def input_students
@@ -63,11 +30,38 @@ def input_students
     # get another name from the user
     name = gets.chomp
   end
-  # return the array of students
-  students
 end
 
-students = input_students
-print_header
-print(students)
-print_footer(students)
+def print_menu
+  puts "1. Input the students"
+  puts "2. Show the students"
+  puts "9. Exit" # 9 because we will be adding more lines
+end
+
+def show_students
+  print_header
+  print_students_list
+  print_footer
+end
+
+def process(selection)
+  case selection
+    when "1"
+      input_students
+    when "2"
+      show_students
+    when "9"
+      exit
+    else
+      puts "I don't know what you mean, try again"
+  end
+end
+
+def interactive_menu
+  loop do
+    print_menu
+    process(gets.chomp)
+  end
+end
+
+interactive_menu
