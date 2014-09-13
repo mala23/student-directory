@@ -6,13 +6,13 @@ def print_header
 end
 
 def print_students_list
-  students.each do |student|
+  @students.each do |student|
     puts "#{student[:name]} (#{student[:cohort]} cohort)"
   end
 end
 
 def print_footer
-  puts "Overall, we have #{students.length} great students"
+  puts "Overall, we have #{@students.length} great students"
 end
 
 def input_students
@@ -26,7 +26,7 @@ def input_students
   while !name.empty? do
     # add the student hash to the array
     students << {:name => name, :cohort => :september}
-    puts "Now we have #{students.length} students"
+    puts "Now we have #{@students.length} students"
     # get another name from the user
     name = gets.chomp
   end
